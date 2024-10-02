@@ -6,6 +6,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SettingsController;
 
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\AboutSectionController;
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -63,7 +66,15 @@ Route::middleware('auth')->group(function () {
     // Settings routes
     Route::get('/settings', [SettingsController::class, 'edit'])->name('settings.edit');
     Route::put('/settings', [SettingsController::class, 'update'])->name('settings.update');
+    Route::get('/admin/about', [AboutSectionController::class, 'index'])->name('about.edit');
+    Route::put('/admin/about/{about}', [AboutSectionController::class, 'update'])->name('about.update');
+
+
+
 });
+
+
+
 
 
 
