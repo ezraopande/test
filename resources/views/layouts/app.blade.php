@@ -26,13 +26,13 @@
     </head>
     <body class="font-sans antialiased">
 
-    <div class="preloader">
+    <!-- <div class="preloader">
 <div class="loader-book">
 <div class="loader-book-page"></div>
 <div class="loader-book-page"></div>
 <div class="loader-book-page"></div>
 </div>
-</div>
+</div> -->
 
     @include('partials.navbar')
        

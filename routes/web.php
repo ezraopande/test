@@ -8,6 +8,7 @@ use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\AboutSectionController;
 use App\Http\Controllers\CounterSectionController;
+    use App\Http\Controllers\CourseController;
 
 
 
@@ -22,6 +23,8 @@ Route::get('/about-us', function () {
 Route::get('/our-courses', function () {
     return view('courses.index');
 });
+
+
 
 Route::get('/course-details', function () {
     return view('courses.details');
@@ -79,6 +82,11 @@ Route::middleware('auth')->group(function () {
 
     Route::get('admin/counter', [CounterSectionController::class, 'index'])->name('counter.index');
     Route::put('admin/counter', [CounterSectionController::class, 'update'])->name('counter.update');
+
+
+
+    Route::resource('courses', CourseController::class);
+
 
 
 

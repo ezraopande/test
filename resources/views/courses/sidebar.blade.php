@@ -30,22 +30,6 @@
 </select>
 </form>
 </div>
-<div class="widget">
-<h5 class="widget-title">Program Level</h5>
-<form action="#">
-<div class="form-check">
-<input class="form-check-input" type="checkbox" name="program" value="1" id="level1" checked>
-<label class="form-check-label" for="level1">
-Graduate
-</label>
-</div>
-<div class="form-check">
-<input class="form-check-input" type="checkbox" name="program" value="2" id="level2">
-<label class="form-check-label" for="level2">
-Undergraduate
-</label>
-</div>
-</form>
-</div>
+
 </div>
 </div>

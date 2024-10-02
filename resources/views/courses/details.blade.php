@@ -38,14 +38,7 @@ is there anyone who loves or pursues or desires to obtain pain of itself,
 because it is pain, but because occasionally circumstances occur in which toil
 and pain can procure him some great pleasure. To take a trivial example
 </p>
-<div class="row">
-<div class="col-md-6 mb-20">
-<img src="assets/img/course/01.jpg" alt>
-</div>
-<div class="col-md-6 mb-20">
-<img src="assets/img/course/02.jpg" alt>
-</div>
-</div>
+
 <p class="mb-20">
 Power of choice is untrammelled and when nothing prevents our being able to do
 what we like best, every pleasure is to be welcomed and every pain avoided. But

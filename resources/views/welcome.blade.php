@@ -28,7 +28,11 @@
 
 
 
-@include('home.courses')
+@php
+    $courses = \App\Models\Course::limit(3)->get(); 
+@endphp
+
+@include('home.courses', ['courses' => $courses])
 
 
 @include('home.video')
