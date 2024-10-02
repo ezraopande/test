@@ -59,8 +59,8 @@ class CourseController extends Controller
         $validatedData = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'category' => 'required|string|max:255',
-            'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'category' => 'required|string|max:255', // Ensure this line exists
+            'image' => 'required|image|mimes:jpg,jpeg,png|max:2048',
             'duration' => 'required|string|max:255',
             'price' => 'required|numeric',
             'language' => 'nullable|string|max:255',
@@ -71,6 +71,7 @@ class CourseController extends Controller
             'requirements' => 'nullable|string',
             'experience' => 'nullable|string',
         ]);
+        
     
         // Handle image upload
         if ($request->hasFile('image')) {
@@ -99,11 +100,12 @@ class CourseController extends Controller
     }
 
 
-    public function show(Course $course)
+    public function show($slug)
     {
-        return view('courses.details', compact('course'));
+        $course = Course::where('slug', $slug)->firstOrFail(); // Retrieve course by slug or 404
+        return view('courses.details', compact('course')); // Pass course data to the view
     }
-
+    
     public function showCourses()
 {
     $courses = Course::all(); // Assuming you have a Course model

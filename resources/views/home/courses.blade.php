@@ -17,12 +17,12 @@
                         <div class="course-img">
                             <span class="course-tag"><i class="far fa-bookmark"></i> {{ $course->category }}</span>
                             <img src="{{ asset('storage/' . $course->image) }}" alt="{{ $course->title }}">
-                            <a href="" class="btn"><i class="far fa-link"></i></a>
+                            <a href="{{ url('/our-courses/' . $course->slug) }}" class="btn"><i class="far fa-link"></i></a>
                         </div>
                         <div class="course-content">
             
                             <h4 class="course-title">
-                                <a href="">{{ $course->title }}</a>
+                                <a href="{{ url('/our-courses/' . $course->slug) }}">{{ $course->title }}</a>
                             </h4>
                             <p class="course-text">
                                 {{ $course->description }}

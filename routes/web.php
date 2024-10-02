@@ -20,10 +20,18 @@ Route::get('/about-us', function () {
     return view('about.index');
 });
 
+// Route::get('/our-courses', function () {
+//     return view('courses.index');
+// });
+
 Route::get('/our-courses', function () {
     return view('courses.index');
-});
+})->name('courses.index');
 
+// Route for displaying course details by slug
+Route::get('/our-courses/{slug}', function ($slug) {
+    return view('courses.details', compact('slug')); // Pass slug to the details view
+})->name('courses.show');
 
 
 Route::get('/course-details', function () {

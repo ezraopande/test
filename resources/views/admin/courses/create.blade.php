@@ -68,6 +68,14 @@
         <label for="requirements">Course Requirements</label>
         <textarea name="requirements" id="requirements" class="form-control">{{ old('requirements') }}</textarea>
     </div>
+
+    <div class="form-group">
+        <label for="requirements">Category</label>
+        <input type="text" name="category" required>
+    </div>
+
+
+
     
     <div class="form-group">
         <label for="experience">Professional Experience</label>
