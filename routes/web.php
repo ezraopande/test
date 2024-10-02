@@ -7,6 +7,7 @@ use App\Http\Controllers\SettingsController;
 
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\AboutSectionController;
+use App\Http\Controllers\CounterSectionController;
 
 
 
@@ -20,6 +21,10 @@ Route::get('/about-us', function () {
 
 Route::get('/our-courses', function () {
     return view('courses.index');
+});
+
+Route::get('/course-details', function () {
+    return view('courses.details');
 });
 
 Route::get('/mobigirlz', function () {
@@ -66,8 +71,15 @@ Route::middleware('auth')->group(function () {
     // Settings routes
     Route::get('/settings', [SettingsController::class, 'edit'])->name('settings.edit');
     Route::put('/settings', [SettingsController::class, 'update'])->name('settings.update');
+
+
     Route::get('/admin/about', [AboutSectionController::class, 'index'])->name('about.edit');
     Route::put('/admin/about/{about}', [AboutSectionController::class, 'update'])->name('about.update');
+
+
+    Route::get('admin/counter', [CounterSectionController::class, 'index'])->name('counter.index');
+    Route::put('admin/counter', [CounterSectionController::class, 'update'])->name('counter.update');
+
 
 
 

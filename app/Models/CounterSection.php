@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class CounterSection extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'icon',
+        'count', // Add count here
+        'title',
+    ];
 }
