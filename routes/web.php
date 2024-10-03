@@ -8,7 +8,8 @@ use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\AboutSectionController;
 use App\Http\Controllers\CounterSectionController;
-    use App\Http\Controllers\CourseController;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\VideoController;
 
 
 
@@ -100,6 +101,13 @@ Route::middleware('auth')->group(function () {
 
 
 });
+
+
+
+Route::resource('videos', VideoController::class);
+
+
+
 
 
 
