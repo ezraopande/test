@@ -1,14 +1,18 @@
+
+@extends('layouts.app')
+
 <?php
 $course = \App\Models\Course::where('slug', $slug)->first();
 ?>
 
-@extends('layouts.app')
 
 @section('title', 'Course Details')
 
 @section('content')
 
 @include('layouts.breadcrumb')
+
+
 
 <div class="course-single-area py-120">
     <div class="container">

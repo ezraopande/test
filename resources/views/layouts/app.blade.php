@@ -26,13 +26,13 @@
     </head>
     <body class="font-sans antialiased">
 
-    <!-- <div class="preloader">
+    <div class="preloader">
 <div class="loader-book">
 <div class="loader-book-page"></div>
 <div class="loader-book-page"></div>
 <div class="loader-book-page"></div>
 </div>
-</div> -->
+</div>
 
     @include('partials.navbar')
        
@@ -48,7 +48,8 @@
 
 
 
-    <script data-cfasync="false" src="{{ asset('assets/js/email-decode.min.js') }}"></script><script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="{{ asset('assets/js/email-decode.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('assets/js/modernizr.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
